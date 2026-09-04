@@ -28,11 +28,12 @@ Objetivo: Detectar uso de parâmetros associados à execução de
 * **Tática / Técnica MITRE AT&CK:** [T1059.001 — Command and Scripting Interpreter: PowerShell](https://attack.mitre.org/techniques/T1059/001/)
 * **Implementação (`local_rules.xml`):**
   ```xml
-  <group name="windows, powershell, evasion,">
-    <rule id="100106" level="12">
-      <if_group>windows</if_group>
-      <regex>-enc|-encodedcommand|-e\s</regex>
-      <description>Alerta de Alta Severidade: possível execução de PowerShell com comando codificado em Base64.</description>
-    </rule>
-  </group>
+   <group name="windows, powershell, evasion">
+      <rule id="100106" level="12">
+        <if_group>windows</if_group>
+        <regex>-enc|-encodedcommand|-e\s</regex>
+        <description>Alerta de Alta Severidade: possível execução de PowerShell com comando codificado em Base64.</description>
+        <mitre>T1059.001/T1027</mitre>
+      </rule>
+   </group>
   ```
