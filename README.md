@@ -160,5 +160,5 @@ O comando foi codificado em Base64 utilizando UTF-16LE e executado através do P
 - Analisar o ParentCommandLine.
 - Decodificar o conteúdo Base64.
 - Classificar o alerta com base no contexto.
-
-## O teste deve ser realizado apenas em ambiente controlado de laboratório.
+  
+> ⚠️ O teste deve ser realizado apenas em ambiente controlado de laboratório.
