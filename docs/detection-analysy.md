@@ -71,6 +71,7 @@ A validação da detecção utilizou o:
 ```text
 Sysmon Event ID 1 — Process Creation
 ```
+<img width="1369" height="819" alt="003-captura-windowsEvent" src="https://github.com/user-attachments/assets/c56adaa5-eaee-495b-a33e-d23ec355ddcb" />
 
 
 Esse evento fornece informações importantes para investigação,
