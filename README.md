@@ -94,8 +94,6 @@ Classificação final: Benigno após investigação.
 
 ---
 
----
-
 ## ✅ 4. Resultado do Laboratório
 
 O laboratório validou com sucesso o fluxo de detecção e investigação:
@@ -118,15 +116,15 @@ Investigação SOC
 Decodificação do payload
    ↓
 Classificação: Benigno após investigação
-````
+```
+---
+
 ### Competências demonstradas
 
-```text
- . Engenharia de detecção no Wazuh
- . Análise de eventos Sysmon
- . Investigação de processos pai/filho
- . Análise de Command Line
- . Decodificação Base64
- . Mapeamento MITRE ATT&CK
- . Triagem e classificação de alertas
-```
+- Engenharia de detecção no Wazuh
+- Análise de eventos Sysmon
+- Investigação de processos pai/filho
+- Análise de Command Line
+- Decodificação Base64
+- Mapeamento MITRE ATT&CK
+- Triagem e classificação de alertas
