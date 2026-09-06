@@ -37,3 +37,42 @@ Objetivo: Detectar uso de parâmetros associados à execução de
       </rule>
    </group>
   ```
+
+  ---
+
+  ---
+
+## 🔎 3. Investigação do Alerta
+
+A regra `100106` foi validada através de uma execução controlada de PowerShell utilizando `-EncodedCommand`.
+
+### Evidências principais
+
+| Campo | Resultado |
+|---|---|
+| Endpoint | Windows10 |
+| Usuário | WINDOWS10\joao |
+| Sysmon Event ID | 1 — Process Creation |
+| Processo pai | powershell.exe |
+| Processo criado | whoami.exe |
+| Rule ID | 100106 |
+| Level | 12 |
+
+### Command Line observada
+
+```text
+"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -ExecutionPolicy Bypass -enc dwBoAG8AYQBtAGkA
+```
+O conteúdo Base64 foi decodificado para:
+
+```text
+whoami
+```
+A investigação demonstrou que a regra detectou corretamente o comportamento configurado, porém não foram encontradas evidências suficientes de atividade maliciosa.
+
+Classificação final: Benigno após investigação.
+
+📄 [Investigação completa](/docs/investigation.md)
+
+📄 [Análise da detecção](/dosc/detection-analysis.md)
+
