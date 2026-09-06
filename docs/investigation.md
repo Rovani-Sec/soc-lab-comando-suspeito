@@ -39,7 +39,7 @@ C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
 ```
 ### Command Line:
 ```text
-"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -ExecutionPolicy Bypass -enc dwBoAG8AYQBtAG
+"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -ExecutionPolicy Bypass -enc dwBoAG8AYQBtAGkA
 ```
 ### Processo Executado:
 ```text
