@@ -162,3 +162,29 @@ O comando foi codificado em Base64 utilizando UTF-16LE e executado através do P
 - Classificar o alerta com base no contexto.
   
 > ⚠️ O teste deve ser realizado apenas em ambiente controlado de laboratório.
+
+---
+
+---
+
+## 📸 6. Evidências
+
+### Geração do payload Base64
+
+![Payload Base64](screenshots/001-base64-whoami.png)
+
+### Alerta da Rule 100106 no Wazuh
+
+![Alerta Wazuh](screenshots/002-captura-regra100106.png)
+
+### Sysmon Event ID 1
+
+![Sysmon Event ID 1](screenshots/003-captura-windowsEvent.png)
+
+### Execução do comando ofuscado
+
+![PowerShell EncodedCommand](screenshots/004-captura-comando-ofuscado.png)
+
+### Decodificação no CyberChef
+
+![Decodificação Base64](screenshots/005-decode-Base64.png)
