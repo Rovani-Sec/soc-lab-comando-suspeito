@@ -55,7 +55,7 @@ Objetivo: Detectar uso de parâmetros associados à execução de
 
   </group>
   ```
-
+ ### 📄 [Ver regra completa](config/local_rules.xml)
   ---
 
 ## 🔎 3. Investigação do Alerta
