@@ -101,7 +101,7 @@ Level: 12
 
 ---
 
-7. Análise do Payload
+## 7. Análise do Payload
 
 O payload utilizado no teste foi:
 ```text
@@ -116,7 +116,7 @@ para validar a capacidade de detecção da regra.
 
 ---
 
-8. MITRE ATT&CK
+## 8. MITRE ATT&CK
 
 A detecção está relacionada às seguintes técnicas:
 
@@ -174,7 +174,7 @@ comportamento posterior à execução.
 
 ---
 
-##11. Conclusão
+## 11. Conclusão
 
 A Rule 100106 demonstrou capacidade de detectar a utilização de
 PowerShell com EncodedCommand.
