@@ -165,8 +165,6 @@ O comando foi codificado em Base64 utilizando UTF-16LE e executado através do P
 
 ---
 
----
-
 ## 📸 6. Evidências
 
 ### Geração do payload Base64
