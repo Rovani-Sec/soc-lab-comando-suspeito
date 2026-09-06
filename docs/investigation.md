@@ -46,7 +46,11 @@ C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
 C:\Windows\System32\whoami.exe
 ```
 
+<img width="1369" height="819" alt="003-captura-windowsEvent" src="https://github.com/user-attachments/assets/8b57ec38-5c4b-4fed-b958-c85de15b9ca1" />
+
 ### Integrity Level: **High**
+
+
 
 ---
 
