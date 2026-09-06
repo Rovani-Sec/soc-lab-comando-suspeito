@@ -128,3 +128,37 @@ Classificação: Benigno após investigação
 - Decodificação Base64
 - Mapeamento MITRE ATT&CK
 - Triagem e classificação de alertas
+
+---
+
+## 🧪 5. Reprodução do Laboratório
+
+### Pré-requisitos
+
+- Windows 10
+- Sysmon configurado
+- Wazuh Agent
+- Wazuh Manager
+- Regra `100106` instalada no Manager
+
+### Comando utilizado para validação
+
+Payload original:
+
+```text
+whoami
+```
+O comando foi codificado em Base64 utilizando UTF-16LE e executado através do PowerShell com -EncodedCommand.
+
+---
+
+### Fluxo de validação
+- Executar o comando controlado no endpoint Windows.
+- Confirmar a geração do Sysmon Event ID 1.
+- Verificar o recebimento do evento pelo Wazuh Agent.
+- Confirmar o acionamento da Rule 100106.
+- Analisar o ParentCommandLine.
+- Decodificar o conteúdo Base64.
+- Classificar o alerta com base no contexto.
+
+## O teste deve ser realizado apenas em ambiente controlado de laboratório.
