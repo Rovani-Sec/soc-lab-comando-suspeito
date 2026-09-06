@@ -28,14 +28,32 @@ Objetivo: Detectar uso de parâmetros associados à execução de
 * **Tática / Técnica MITRE AT&CK:** [T1059.001 — Command and Scripting Interpreter: PowerShell](https://attack.mitre.org/techniques/T1059/001/)
 * **Implementação (`local_rules.xml`):**
   ```xml
-   <group name="windows, powershell, evasion">
-      <rule id="100106" level="12">
-        <if_group>windows</if_group>
-        <regex>-enc|-encodedcommand|-e\s</regex>
-        <description>Alerta de Alta Severidade: possível execução de PowerShell com comando codificado em Base64.</description>
-        <mitre>T1059.001/T1027</mitre>
-      </rule>
-   </group>
+  <group name="windows,sysmon,powershell,evasion,">
+
+  <!--
+    Rule 100106
+    Detecta execução de PowerShell utilizando EncodedCommand.
+    Validada em laboratório com Sysmon Event ID 1.
+  -->
+
+  <rule id="100106" level="12">
+    <if_sid>61603</if_sid>
+
+    <regex type="pcre2">(?i)(?:-enc|-encodedcommand)\s+</regex>
+
+    <description>
+      Possível execução de PowerShell com comando codificado em Base64
+    </description>
+
+    <mitre>
+      <id>T1059.001</id>
+      <id>T1027</id>
+    </mitre>
+
+    <group>powershell,encoded_command,sysmon_event1,</group>
+  </rule>
+
+  </group>
   ```
 
   ---
