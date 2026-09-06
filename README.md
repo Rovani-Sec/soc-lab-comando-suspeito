@@ -40,8 +40,6 @@ Objetivo: Detectar uso de parâmetros associados à execução de
 
   ---
 
-  ---
-
 ## 🔎 3. Investigação do Alerta
 
 A regra `100106` foi validada através de uma execução controlada de PowerShell utilizando `-EncodedCommand`.
@@ -72,7 +70,45 @@ A investigação demonstrou que a regra detectou corretamente o comportamento co
 
 Classificação final: Benigno após investigação.
 
-📄 [Investigação completa](/docs/investigation.md)
+📄 [Investigação completa](docs/investigation.md)
 
-📄 [Análise da detecção](/dosc/detection-analysis.md)
+📄 [Análise da detecção](docs/detection-analysis.md)
 
+---
+
+---
+
+## ✅ 4. Resultado do Laboratório
+
+O laboratório validou com sucesso o fluxo de detecção e investigação:
+
+```text
+PowerShell
+   ↓
+-EncodedCommand
+   ↓
+Sysmon Event ID 1
+   ↓
+Wazuh Agent
+   ↓
+Rule 100106
+   ↓
+Alerta Level 12
+   ↓
+Investigação SOC
+   ↓
+Decodificação do payload
+   ↓
+Classificação: Benigno após investigação
+````
+### Competências demonstradas
+
+```text
+ . Engenharia de detecção no Wazuh
+ . Análise de eventos Sysmon
+ . Investigação de processos pai/filho
+ . Análise de Command Line
+ . Decodificação Base64
+ . Mapeamento MITRE ATT&CK
+ . Triagem e classificação de alertas
+```
